@@ -177,16 +177,17 @@ def team_names
 end 
 
 def player_numbers(team_name)
-player_num = []
+
 if team_name == game_hash[:home][:team_name]
- game_hash[:home][:players].each do |player|
-   player_num.push(player[:number])
+ game_hash[:home][:players].map do |player|
+  player[:number]
+end
  else 
-   game_hash[:away][:players].each do |player|
-   player_num.push(player[:number])
+   game_hash[:away][:players].map do |player|
+  player[:number]
  end
 end
-player_num
+end 
 
 
 
