@@ -178,6 +178,11 @@ end
 
 def player_numbers(team_name)
 player_num = []
+if team_name == game_hash[:home][:team_name]
+ game_hash[:home][:players].each do |player|
+   player_num.push(player[:number])
+   elsif 
+   
 
 end
 
