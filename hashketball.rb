@@ -177,19 +177,13 @@ def team_names
 end 
 
 def player_numbers(team_name)
-  nds = game_hash
-  nds[:home][:players].collect do |element_one_hash_home|
-   if team_name == nds[:home][:team_name]
-    return element_one_hash_home.values[1]
-  
-    
 
-#collect the value then iterate the count?
-#element_one_hash_home.values ==> [1]
-end
-end
 end
 
+def player_stats
+end
+
+big_shoe_rebounds
 
 
 
