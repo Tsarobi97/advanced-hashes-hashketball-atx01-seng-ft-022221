@@ -182,15 +182,13 @@ if team_name == game_hash[:home][:team_name]
  game_hash[:home][:players].each do |player|
    player_num.push(player[:number])
    elsif 
-   
+   game_hash[:away][:players].each do |player|
+   player_num.push(player[:number])
+ end 
+ end 
+ player_num
+ end 
 
-end
-
-def player_stats
-end
-
-def big_shoe_rebounds
-end
 
 
 
