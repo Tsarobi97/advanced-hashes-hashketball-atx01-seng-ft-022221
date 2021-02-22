@@ -184,6 +184,7 @@ if team_name == game_hash[:home][:team_name]
  else
    game_hash[:away][:players].each do |player|
    player_num.push(player[:number])
+ end
  end 
  player_num
  end 
