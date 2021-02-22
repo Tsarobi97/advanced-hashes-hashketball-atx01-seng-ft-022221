@@ -181,7 +181,7 @@ player_num = []
 if team_name == game_hash[:home][:team_name]
  game_hash[:home][:players].each do |player|
    player_num.push(player[:number])
-   elsif 
+ else
    game_hash[:away][:players].each do |player|
    player_num.push(player[:number])
  end 
