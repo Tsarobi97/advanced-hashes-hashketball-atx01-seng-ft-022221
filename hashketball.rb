@@ -1,4 +1,5 @@
-# Write your code below game_hash
+require 'pry'
+
 def game_hash
   {
     home: {
@@ -126,4 +127,80 @@ def game_hash
   }
 end
 
-# Write code here
+def num_points_scored(players_name)
+  nds = game_hash
+  nds[:away][:players].each do |x|
+  nds[:home][:players].each do |y|
+    #binding.pry
+        x.values
+        y.values
+         if players_name == x.values[0]
+           return x.values[3]
+           elsif players_name == y.values[0]
+           return y.values[3]
+    end
+  end 
+ end
+end 
+
+def shoe_size(players_name)
+  nds = game_hash
+  nds[:away][:players].each do |away_player_hash|
+  nds[:home][:players].each do |home_player_hash|
+    if players_name == away_player_hash.values[0]
+      return away_player_hash.values[2]
+      elsif players_name == home_player_hash.values[0]
+      return home_player_hash.values[2]
+   end  
+  end 
+ end
+end
+
+def team_colors(team_name)
+  nds = game_hash
+  if team_name == nds[:home][:team_name]
+    return nds[:home][:colors]
+    elsif team_name == nds[:away][:team_name]
+    return nds[:away][:colors]
+  binding.pry
+#return array of that teams color 
+#input team name - return color of kit
+ end
+end
+
+def team_names
+  nds = game_hash
+  final_array = []
+  final_array << nds[:home][:team_name]
+  final_array << nds[:away][:team_name]
+  return final_array
+end 
+
+def player_numbers(team_name)
+  nds = game_hash
+  nds[:home][:players].collect do |element_one_hash_home|
+   if team_name == nds[:home][:team_name]
+    return element_one_hash_home.values[1]
+  
+    
+
+#collect the value then iterate the count?
+#element_one_hash_home.values ==> [1]
+end
+end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
